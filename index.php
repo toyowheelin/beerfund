@@ -77,10 +77,10 @@ $goal = $first / $btcgrc;
 .my-image {
     margin: 0 auto;
 }
-.loadgo-container { 
+.loadgo-container {
     display: inline-block;
     margin: 0 auto;
-} 
+}
 #progress {
     font-size:16px;
     font-weight:bold;
@@ -88,6 +88,17 @@ $goal = $first / $btcgrc;
 #pints {
     margin-bottom:10px;
     font-size:16px;
+}
+#donate {
+  margin-top: 4em;
+  font-size: 12px;
+  color: #777;
+}
+#donate a {
+  color: #7235d3;
+}
+#grc-address {
+  margin-left: .5em;
 }
 </style>
 <body>
@@ -98,9 +109,10 @@ Goal: <?php echo $goal;?> GRC<br />
   <img id="logo" src="keg.jpg" class="my-image" alt="Logo" />
   <div id="progress">0 %</div>
   <div id="pints"></div>
+  <div id="donate">Donate <a href="https://gridcoin.us/">GridCoin</a> <span id="grc-address">S6v2YyShTd9J9VwL7Ngsd6Kz1ZMsfbWUsi</span></div>
 </div>
 </body>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script> 
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/LoadGo/2.2/loadgo.min.js"></script>
 <script type="text/javascript" src="countUp.js"></script>
 
@@ -113,11 +125,11 @@ $logo.loadgo({ direction: 'bt', opacity: 0.7 });
 $logo.loadgo('setprogress', p);
 
 var percent = {
-    useEasing: true, 
-    useGrouping: true, 
-    separator: ',', 
-    decimal: '.', 
-    suffix: '%' 
+    useEasing: true,
+    useGrouping: true,
+    separator: ',',
+    decimal: '.',
+    suffix: '%'
 };
 var numAnimPercent = new CountUp("progress", 0, p, 2, 1.0, percent);
 if (!numAnimPercent.error) {
@@ -142,5 +154,5 @@ if (!numAnimPint.error) {
 } else {
     console.error(numAnimPint.error);
 }
-</script> 
+</script>
 </html>
