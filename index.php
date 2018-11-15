@@ -22,6 +22,7 @@
     ?>
 
     <div id="donate">Donate <a href="https://gridcoin.us/">GridCoin</a> <span id="grc-address">S6v2YyShTd9J9VwL7Ngsd6Kz1ZMsfbWUsi</span></div>
+    <div id="fork"><a href="https://github.com/toyowheelin/beerfund" target="_blank">https://github.com/toyowheelin/beerfund</a></div>
 </div>
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
