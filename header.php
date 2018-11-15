@@ -3,6 +3,7 @@
 require_once('functions.php');
 if (is_readable('config.php')) {
     require_once('config.php');
+    $noconf = false;
 } else{
     $noconf = true;
 }
