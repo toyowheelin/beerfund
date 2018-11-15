@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <?php
-$username = 'USERNAME';
-$password = 'PASSWORD';
-$URL = 'http://IP:PORT';
-$USDgoal = '172';
+if (file_exists(stream_resolve_include_path('config.php'))){
+        $config = require_once('config.php');
+} else{
+        $noconf = TRUE;
+}
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL,$URL);
+curl_setopt($ch, CURLOPT_URL,$config['URL']);
 curl_setopt($ch, CURLOPT_TIMEOUT, 30); //timeout after 30 seconds
 curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
 curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
 curl_setopt($ch, CURLOPT_POSTFIELDS, '{"method":"getbalance"}');
-curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
+curl_setopt($ch, CURLOPT_USERPWD, "{$config['username']}:{$config['password']}");
 $result=curl_exec ($ch);
 $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);   //get status code
 curl_close ($ch);
@@ -66,7 +67,7 @@ function USDBTC(){
 BTCGRC();
 USDBTC();
 
-$first = $USDgoal / $usdbtc;
+$first = $config['USDgoal'] / $usdbtc;
 $goal = $first / $btcgrc;
 ?>
 <html>
@@ -103,12 +104,17 @@ $goal = $first / $btcgrc;
 </style>
 <body>
 <div style="text-align:center;">
-<H1>Beer Fund</H1>
-Current Balance: <?php echo $parsed_json; ?> GRC<br />
-Goal: <?php echo $goal;?> GRC<br />
-  <img id="logo" src="keg.jpg" class="my-image" alt="Logo" />
-  <div id="progress">0 %</div>
-  <div id="pints"></div>
+<?php if (!$noconf){
+echo "<H1>Beer Fund</H1>";
+  echo "Current Balance: $parsed_json GRC<br />";
+  echo "Goal: $goal GRC<br />";
+  echo "<img id='logo' src='keg.jpg' class='my-image' alt='Logo' />";
+  echo "<div id='progress'>0 %</div>";
+  echo "<div id='pints'></div>";}
+      else{
+  echo "<H1>Please create a config.php file from the example in the root directory.</H1>";
+  }
+?>
   <div id="donate">Donate <a href="https://gridcoin.us/">GridCoin</a> <span id="grc-address">S6v2YyShTd9J9VwL7Ngsd6Kz1ZMsfbWUsi</span></div>
 </div>
 </body>
