@@ -89,6 +89,17 @@ $goal = $first / $btcgrc;
     margin-bottom:10px;
     font-size:16px;
 }
+#donate {
+  margin-top: 4em;
+  font-size: 12px;
+  color: #777;
+}
+#donate a {
+  color: #7235d3;
+}
+#grc-address {
+  margin-left: .5em;
+}
 </style>
 <body>
 <div style="text-align:center;">
@@ -98,10 +109,7 @@ Goal: <?php echo $goal;?> GRC<br />
   <img id="logo" src="keg.jpg" class="my-image" alt="Logo" />
   <div id="progress">0 %</div>
   <div id="pints"></div>
-  <br />
-  <br />
-  <br />
-  Donate GridCoin SBbcVxZuk61ziThuoTFmdKxHgTpJtECbBH<br />
+  <div id="donate">Donate <a href="https://gridcoin.us/">GridCoin</a> <span id="grc-address">SBbcVxZuk61ziThuoTFmdKxHgTpJtECbBH</span></div>
 </div>
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
