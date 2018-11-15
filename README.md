@@ -17,7 +17,8 @@ Preferably some kind of steady input of funds into your gridcoin wallet such as 
  
 ### Setup of wallet RPC via gridcoinresearch.conf
 
-```server=1
+```
+server=1
 rpcallowip=<IP Address of Remote System>
 rpcport=<Port for RPC Communication>
 rpcuser=<A Username for RPC>
