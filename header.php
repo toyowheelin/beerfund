@@ -32,4 +32,6 @@ if (is_readable('config.php')) {
     $goal = $first / $btcgrc;
 } else {
     $noconf = true;
+    $parsed_json = 0;
+    $goal = 0;
 }
