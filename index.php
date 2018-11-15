@@ -109,7 +109,7 @@ Goal: <?php echo $goal;?> GRC<br />
   <img id="logo" src="keg.jpg" class="my-image" alt="Logo" />
   <div id="progress">0 %</div>
   <div id="pints"></div>
-  <div id="donate">Donate <a href="https://gridcoin.us/">GridCoin</a> <span id="grc-address">SBbcVxZuk61ziThuoTFmdKxHgTpJtECbBH</span></div>
+  <div id="donate">Donate <a href="https://gridcoin.us/">GridCoin</a> <span id="grc-address">S6v2YyShTd9J9VwL7Ngsd6Kz1ZMsfbWUsi</span></div>
 </div>
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
