@@ -31,7 +31,7 @@
 </div>
 <div class="row">
     <div class="col-auto offset-4" id="donate">Donate <a href="https://gridcoin.us/">GridCoin</a> <span id="grc-address">S6v2YyShTd9J9VwL7Ngsd6Kz1ZMsfbWUsi</span></div>
-    <div id="fork"><a class="btn btn-info" href="https://github.com/toyowheelin/beerfund" target="_blank">GitHub</a></div>
+    <div id="fork"><a class="btn btn-info" href="https://github.com/toyowheelin/beerfund" target="_blank" style="margin-top:-18px;">GitHub</a></div>
 </div>
 </div>
 </body>
