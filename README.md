@@ -1,6 +1,8 @@
 # beerfund
 PHP page that shows the current funding progress to a goal of filling a beer keg via gridcoin using live exchange rates.
 
+A live working example can be found here [Beerfund](http://beerfund.sudogeeks.com)
+
 GridCoin donations S6v2YyShTd9J9VwL7Ngsd6Kz1ZMsfbWUsi
 
 ## Getting Started
