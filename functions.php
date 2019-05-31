@@ -10,10 +10,10 @@ function BTCGRC(){
                 $sum = 0;
                 foreach($decoded_result as $result) {
                     $sum+= $result->{"Rate"};
-                    if(++$i > 9) break;
+                    if(++$i > 2) break;
                 }
                 global $btcgrc;
-                $btcgrc = $sum / 10;
+                $btcgrc = $sum / 3;
             }
         }
     }
