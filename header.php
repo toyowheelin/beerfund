@@ -47,16 +47,16 @@ if (is_readable('config.php')) {
     if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
     }
+    if ($cron = getenv('IS_CRON')) {
 
-    $conversion = "insert into conversion_rate (unix_timestamp, bittrex_chat_id, usd_btc, btc_grc, usd_grc) values(unix_timestamp(), 1, $usdbtc, $btcgrc, $usdgrc)";
-    $conn->query($conversion);
-      if ($conn->query($conversion) === TRUE) {
-         $last_id = $conn->insert_id;
-     }
-    $balance = "insert into fund_balance (unix_timestamp, bittrex_chat_id, conversion_rate_id, current_balance, goal, pints, percent_full) values(unix_timestamp(), 1, $last_id, $parsed_json, $goal, $pints_total, $percent_full)";
-    $conn->query($balance);
-
-    $conn->close();
+        $conversion = "insert into conversion_rate (unix_timestamp, bittrex_chat_id, usd_btc, btc_grc, usd_grc) values(unix_timestamp(), 1, $usdbtc, $btcgrc, $usdgrc)";
+        $conn->query($conversion);
+          if ($conn->query($conversion) === TRUE) {
+             $last_id = $conn->insert_id;
+         }
+        $balance = "insert into fund_balance (unix_timestamp, bittrex_chat_id, conversion_rate_id, current_balance, goal, pints, percent_full) values(unix_timestamp(), 1, $last_id, $parsed_json, $goal, $pints_total, $percent_full)";
+        $conn->query($balance);
+    }
 
 
 } else {

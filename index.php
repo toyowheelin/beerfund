@@ -76,3 +76,4 @@ if (!numAnimPint.error) {
 }
 </script>
 </html>
+<?php $conn->close(); ?>
