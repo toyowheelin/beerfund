@@ -30,6 +30,10 @@
     }
     ?>
 </div>
+<div class="row" style="margin-bottom: 20px;">
+<div class="col-auto offset-4" id="donate"><a href="/history.php">History</a></div>
+<div class="col-auto offset-3" id="donate"><a href="/chart.php">Chart</a></div>
+</div>
 <div class="row">
     <div class="col-auto offset-4" id="donate">Donate <a href="https://gridcoin.us/">GridCoin</a> <span id="grc-address">S6v2YyShTd9J9VwL7Ngsd6Kz1ZMsfbWUsi</span></div>
     <div id="fork"><a class="btn btn-info" href="https://github.com/toyowheelin/beerfund" target="_blank" style="margin-top:-18px;">GitHub</a></div>
