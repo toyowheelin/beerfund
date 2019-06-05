@@ -26,7 +26,7 @@
         echo 	"<div id='pints'></div>";
 	echo "</div>";
     } else {
-        echo "<H1>Please rename the file config-example.php to config.php in the root directory to make the project working.</H1>";
+        echo "<H1>Please edit and rename the file config-example.php to config.php in the root directory to make things work.</H1>";
     }
     ?>
 </div>
